@@ -1,96 +1,91 @@
-*{
-    box-sizing: border-box;
- 
+* {
+  box-sizing: border-box;
 }
 
 /* uses a user's built in font */
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 .navbar {
-    border-bottom: 2px solid #333;
-    padding: 15px;
-    text-align: center;
-    margin-bottom: 0;
+  border-bottom: 2px solid #333;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 0;
 }
-
-
 
 .scoreboard {
-    max-width: 295px;
-    width: 100%;
-    margin: 10px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
-    row-gap: 10px;
-    column-gap: 5px;
+  max-width: 295px;
+  width: 100%;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 5px;
 }
 
-.scoreboard-letter{
-    width: 45px;
-    height: 45px;
-    border: 3px solid rgb(194, 189, 189);
-    border-radius: 5px;
-    font-size: 30px;
-    text-transform: uppercase;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+.scoreboard-letter {
+  width: 45px;
+  height: 45px;
+  border: 3px solid rgb(194, 189, 189);
+  border-radius: 5px;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .correct {
-    background-color: darkgreen;
-    color: white;
+  background-color: rgb(0, 99, 0);
+  color: white;
 }
 
-.wrong{
-    background-color: #888;
-    color: white;
+.wrong {
+  background-color: #888;
+  color: white;
 }
-
+.close {
+  background-color: rgb(255, 236, 65);
+  color: white;
+}
 .invalid {
-    animation: flash 1s;
+  animation: flash 1s;
 }
-
 
 @keyframes flash {
-    5%{
-        border-color: crimson;
-    }
+  5% {
+    border-color: rgb(220, 20, 20);
+  }
 
-
-    100%{
-        border-color: #ccc;
-    }
+  100% {
+    border-color: #ccc;
+  }
 }
 
 .spiral {
-    font-size: 40px;
-    animation: spin 1.5s linear infinite;
+  font-size: 40px;
+  animation: spin 1.5s linear infinite;
 }
-
 
 @keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-
+  to {
+    transform: rotate(360deg);
+  }
 }
 .hidden {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .info-bar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 
 @keyframes rainbow {
   100%,
@@ -134,4 +129,17 @@ body {
 
 .winner {
   animation: rainbow 4s infinite linear;
+}
+
+.warning {
+  width: 120px;
+  height: 30px;
+  color: white;
+  background-color: rgb(181, 37, 18);
+  border-radius: 5px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: flash 2s;
 }
