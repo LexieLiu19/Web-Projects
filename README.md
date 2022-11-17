@@ -1,1 +1,2 @@
 - Web-Calculator
+- Wordle
