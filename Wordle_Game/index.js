@@ -8,7 +8,7 @@ const navbar = document.querySelector('.navbar');
 const warning = document.querySelector('.warning');
 const WORD_LENGTH = 5;
 
-const rounds = 5;
+const rounds = 6;
 
 async function init() {
   let currentGuess = '';
